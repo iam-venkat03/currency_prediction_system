@@ -9,19 +9,48 @@
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">     
+    <style type="text/css">
+         body {
+            background-image: url("https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
+              background-repeat:no-repeat;
+              }
+
+
+       	.center {
+  margin: auto;
+  width:50%;
+  position: center;
+  padding: 10px;
+  background-color: #098C7E;
+}
+.navbar-custom { 
+            background-color: #39D2B4; 
+        }           
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-text { 
+            color: #17202A; 
+        } 
+
+
+
+
+    </style> 
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+	<div class="center">
+    <nav class="navbar navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="#">Currency Predicition</a>
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Help</button>
+            <a class="navbar-brand" href="#" >Currency Predicition</a>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Help</button>
         </div>
     </nav>
     <div class="container">
+
         <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
     </div>
+  </div>
 </body>
 
 <footer>
