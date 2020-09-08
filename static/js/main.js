@@ -11,7 +11,7 @@ $(document).ready(function () {
             reader.onload = function (e) {
                 $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                 $('#imagePreview').hide();
-                $('#imagePreview').fadeIn(650);
+                $('#imagePreview').fadeIn(1000);
             }
             reader.readAsDataURL(input.files[0]);
         }
