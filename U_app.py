@@ -8,6 +8,8 @@ import re
 import numpy as np
 
 # Keras
+from tensorflow import keras
+import tensorflow
 from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
@@ -16,17 +18,18 @@ from keras.preprocessing.image import load_img
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
-#from gevent.pywsgi import WSGIServer
+from gevent.pywsgi import WSGIServer
+
 
 # Define a flask app
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH ='C:/Users/ADMIN/Desktop/model_30_epoch.h5'
-MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/country_20_epoch.h5'
+MODEL_PATH ='C:/Users/ADMIN/Desktop/CURRENCY_MODEL_1.h5'
+MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/country_35_epoch_final.h5'
 
 # Load your trained model
-model = load_model(MODEL_PATH)
+model = keras.models.load_model(MODEL_PATH)
 model_2 = load_model(MODEL_PATH2)
 
 

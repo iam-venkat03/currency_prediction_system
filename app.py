@@ -29,7 +29,7 @@ app = Flask(__name__)
 
 # Model saved with Keras model.save()
 MODEL_PATH ='C:/Users/ADMIN/Desktop/model_30_epoch.h5'
-MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/country_20_epoch.h5'
+MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/country_35_epoch_final.h5'
 
 # Load your trained model
 model = load_model(MODEL_PATH)
