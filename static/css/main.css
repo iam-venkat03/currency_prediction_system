@@ -22,17 +22,17 @@ input[type="file"] {
 .upload-label{
     display: inline-block;
     padding: 12px 30px;
-    background: #2b95a1;
-    color: #fff;
+    /*background: #ffffff;
+    color: #000000;*/
     font-size: 1em;
     transition: all .4s;
     cursor: pointer;
 }
 
 .upload-label:hover{
-    background: #39D2B4;
-    color: #17202A;
-}
+    background: #000000;
+    color: #000000;
+} 
 .loader {
     border: 8px solid #f3f3f3; /* Light grey */
     border-top: 8px solid #3498db; /* Blue */
