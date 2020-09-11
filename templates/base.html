@@ -9,41 +9,66 @@
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">     
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <style type="text/css">
          body {
-            background-image: url("https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
-              background-repeat:no-repeat;
+
+            background-image: url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png');
+              /*background-position: center;*/
+              background-repeat: no-repeat;
+              background-size: cover;
               }
 
 
-       	.center {
-  margin: auto;
+        .center {
+  margin: 0 auto;
   width:50%;
-  position: center;
+  height: 600px;
+  margin-top:100;
+  margin-right:auto;
+  margin-bottom:200; 
+  margin-left:auto;
+  /*position: center;*/
   padding: 10px;
-  background-color: #098C7E;
+  background-color: #ffff66;
 }
 .navbar-custom { 
-            background-color: #39D2B4; 
+            background-color: #000048;
+            color: black;
         }           
-        .navbar-custom .navbar-brand, 
-        .navbar-custom .navbar-text { 
-            color: #17202A; 
+.navbar-custom .navbar-brand{
+          color: #ffff66; 
         } 
+.navbar-custom .navbar-text { 
+            color: #276897;
+        } 
+.container{
+  margin: 0 auto;
+}
+#kp{
+  /*position: fixed;*/
+  text-align: center;
+  color: white;
+  background-color: #17202A;
+  padding:10px;
+  margin-top: 25em;
+  box-sizing: border-box;
+}
 
-
-
+.btn{
+  background-color: #ffff66 ;
+}
 
     </style> 
 </head>
 
 <body>
-	<div class="center">
+  <div class="center">
     <nav class="navbar navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="#" >Currency Predicition</a>
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Help</button>
+            <a class="navbar-brand" href="#" >Currency Classification</a>
+            <button  class="btn " type="submit"><a href="#kp" style="color: #000048">CONTACT</a></button>
         </div>
     </nav>
     <div class="container">
@@ -53,8 +78,49 @@
   </div>
 </body>
 
-<footer>
-    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+<footer id="kp">
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+
+    <p>
+      <h5 style="color: #ffff66;"> Udhai Solai AR </h5>
+      <a href="https://www.linkedin.com/in/udhai-solai-ar-496130178/">
+      <i style="font-size:24px" class="fa">&#xf08c;</i></a>
+      <a href="https://github.com/1303karthick">
+      <i style="font-size:24px" class="fa fa-github"></i>
+      </a>
+
+      <br>
+
+      <h5 style="color: #ffff66;"> Venkatesha Prasad S</h5>
+
+      <a href="https://www.linkedin.com/in/venkatesha-prasad-sridar/">
+      <i style="font-size:24px" class="fa">&#xf08c;</i></a>
+      <a href="https://github.com/iam-venkat03">
+      <i style="font-size:24px" class="fa fa-github"></i>
+      </a>
+
+      <br>
+
+
+      <h5 style="color: #ffff66;"> Naveen J </h5>
+
+      <a href="https://www.linkedin.com/in/naveen-j-02242118b/">
+      <i style="font-size:24px" class="fa">&#xf08c;</i></a>
+      <a href="https://github.com/Naveen-Jaisankar">
+      <i style="font-size:24px" class="fa fa-github"></i>
+      </a>
+
+      <br>
+
+      <h5 style="color: #ffff66;"> Mano Vasanth </h5>
+
+      <a href="https://www.linkedin.com/in/manovasanth-b-352200199">
+      <i style="font-size:24px" class="fa">&#xf08c;</i></a>
+      
+    </p>
+
+
+
 </footer>
 
 </html>

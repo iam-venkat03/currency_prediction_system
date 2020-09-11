@@ -1,18 +1,15 @@
 {% extends "base.html" %} {% block content %}
-<style type="text/css">
-    .imageUpload{
-        background-color: #34495E;
-    }
-</style>
-<center>
-<h2>Currency Image Classifier</h2>
 
+<center>
+
+<h3>Choose Image</h3>
+<br>
 <div>
 
     <form id="upload-file" method="post" enctype="multipart/form-data">
               
-        <label for="imageUpload" class="upload-label" >
-            Choose!
+        <label for="imageUpload" class="upload-label" style="background-color: #000048; color: #ffff66;">
+            Upload
         </label>
         <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
         
@@ -24,7 +21,7 @@
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict</button>
+            <button type="button" style="background-color: #000048; color: #ffff66"; class="btn btn btn-lg " id="btn-predict">Predict</button>
         </div>
     </div>
 
