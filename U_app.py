@@ -26,7 +26,7 @@ app = Flask(__name__)
 
 # Model saved with Keras model.save()
 MODEL_PATH ='C:/Users/ADMIN/Desktop/CURRENCY_MODEL_1.h5'
-MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/country_35_epoch_final.h5'
+MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/xxx/COUNTRYMODEL.h5'
 
 # Load your trained model
 model = keras.models.load_model(MODEL_PATH)
