@@ -1,4 +1,4 @@
-Image Classification Project:
+Currency Image Classification Project:
 
 * A classification model which predicts the country and denomination of a currency. 
 
@@ -21,3 +21,5 @@ Screenshots of the webpage / Demo :
 ![Screenshot1](3.PNG)
 
 ![Screenshot1](5.PNG)
+
+Thank you!
