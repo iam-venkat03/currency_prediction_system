@@ -2,7 +2,7 @@ Currency Image Classification Project:
 
 * A classification model which predicts the country and denomination of a currency. 
 
-* The dataset is created using Data Augumnetation.
+* The dataset is created using Data Augmentation.
 
 * Architecture - VGG-16.
 
