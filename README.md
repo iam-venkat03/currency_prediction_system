@@ -1,7 +1,23 @@
-It is a currency Prediciton system.
+Image Classification Project:
 
-Initially created with 3 countries.
+* A classification model which predicts the country and denomination of a currency. 
 
-If the currency image of a country is uploaded, the model predicts the country and denomination of the currency.
+* The dataset is created using Data Augumnetation.
 
-The initial countries with which the model is created are India, Singapore and USA.
+* Architecture - VGG-16.
+
+* Deployment is done using Flask Framework.
+
+* The model is initially created with 3 countries : India, Singapore and United States of America.
+
+Screenshots of the webpage / Demo :
+
+![Screenshot1](1.PNG)
+
+![Screenshot1](2.PNG)
+
+![Screenshot1](4.PNG)
+
+![Screenshot1](3.PNG)
+
+![Screenshot1](5.PNG)
