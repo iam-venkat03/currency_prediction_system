@@ -1,38 +1,35 @@
-
 from __future__ import division, print_function
+
 # coding=utf-8
-import sys
 import os
-import glob
-import re
 import numpy as np
 
 # Keras
+
 from tensorflow import keras
-import tensorflow
-from tensorflow.keras.applications.imagenet_utils import preprocess_input, decode_predictions
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
-from keras.preprocessing.image import load_img
+from keras.applications import ResNet50
+from keras.applications.resnet50 import preprocess_input
+
+
+from keras.layers import Dense
+from keras.models import Sequential, load_model
+from keras.preprocessing import image
 
 # Flask utils
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
 
 
 # Define a flask app
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH ='C:/Users/ADMIN/Desktop/CURRENCY_MODEL_1.h5'
-MODEL_PATH2 = 'C:/Users/ADMIN/Desktop/xxx/COUNTRYMODEL.h5'
+MODEL_PATH ='C:/Users/venka/Downloads/currency_prediction_system-master/currency_prediction_system-master/initial_currency_model.h5'
+MODEL_PATH2 = 'C:/Users/venka/Downloads/currency_prediction_system-master/currency_prediction_system-master/initial_country_model.h5'
 
 # Load your trained model
-model = keras.models.load_model(MODEL_PATH)
+model = load_model(MODEL_PATH)
 model_2 = load_model(MODEL_PATH2)
-
-
 
 
 def model_predict(img_path, model):
@@ -49,18 +46,20 @@ def model_predict(img_path, model):
     x = preprocess_input(x)
 
     preds = model.predict(x)
-    preds=preds.argmax()
+    preds= preds.argmax()
 
     country = model_2.predict(x)
     country = country.argmax()
 
-    curr_dict = {0:"1",1:"10",2:"100", 3:"1000",4:"2",5:"20", 6:"200",7:"2000",8:"5",9:"50",10:"500"}
-    coun_dict = {0:" India ", 1:" Singapore ", 2:"United States of America"}
+    #curr_dict = {'1': 0,'1-2': 1,'1-4': 2,'10': 3,'100': 4,'1000': 5,'10000': 6,'20': 7,'200': 8,'5': 9,'50': 10,'500': 11,'5000': 12}
+    #coun_dict = {0:" India ", 1:" Singapore ", 2:"United States of America"}
 
-    if country==1 or country==2:
-        final = "$"+str(curr_dict[preds]) + " "+ "("+ str(coun_dict[country]+")")
-    else:
-        final = "₹"+str(curr_dict[preds]) + " "+"("+ str(coun_dict[country]+")")  
+    coun_decision = {0: "Australia", 1: "Europe", 2:"Japan", 3: "Kuwait", 4: "Mexico", 5:"New Zealand", 6: "Switzerland", 7: "UK"}
+    curr_dict = {0: '1', 1: '1-2', 2: '1-4', 3: '10', 4: '100', 5: '1000', 6: '10000', 7: '20', 8: '200', 9: '5', 10: '50', 11: '500', 12: '5000'}
+
+
+
+    final = str(curr_dict[preds]) + " " + str(coun_decision[country])
     
     return final
 
